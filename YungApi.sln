@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "YungApi", "YungApi.vbproj", "{048C6048-66DF-4CEE-8C87-5365B6998669}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YungApi", "YungApi.csproj", "{895FE9C2-D94E-4C32-902D-7C544B42338C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{048C6048-66DF-4CEE-8C87-5365B6998669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{048C6048-66DF-4CEE-8C87-5365B6998669}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{048C6048-66DF-4CEE-8C87-5365B6998669}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{048C6048-66DF-4CEE-8C87-5365B6998669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{895FE9C2-D94E-4C32-902D-7C544B42338C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{895FE9C2-D94E-4C32-902D-7C544B42338C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{895FE9C2-D94E-4C32-902D-7C544B42338C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{895FE9C2-D94E-4C32-902D-7C544B42338C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {585189BC-29ED-4A3C-8B43-5619AFA9208D}
+		SolutionGuid = {F1BB307F-C2DB-4D78-A438-20BFD70E1DAD}
 	EndGlobalSection
 EndGlobal
