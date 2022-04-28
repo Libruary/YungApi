@@ -14,17 +14,7 @@ using YungApi.Models;
 namespace YungApi
 {
     public class YungService
-    {
-        bool SetPublicParameter()
-        { 
-            try
-            { 
-            }
-            catch
-            { 
-            }
-            return false;
-        }       
+    {      
         //查詢
         public bool GetClerk(string ClerkNo,ref GetClerk_outData OutData )
         {
@@ -63,7 +53,7 @@ namespace YungApi
             {
                 DataTable OutputTab = new DataTable("Clerk");
                 OutData = new JAddClerk_outData();
-                string ConnectStr = ConfigurationManager.ConnectionStrings["Yung"].ConnectionString;// "data source=" + DBPath;
+                string ConnectStr = ConfigurationManager.ConnectionStrings["Yung"].ConnectionString;
                 using (var Conn = new SqliteConnection(ConnectStr))
                 {
                     Conn.Open();
@@ -109,7 +99,7 @@ namespace YungApi
             }
         }
         //刪除
-        public bool RemoveClerk(JRemoveClerkPS_inData inData, ref JRemoveClerkPS_outData OutData)
+        public bool RemoveClerk(String ClerkNo, ref JRemoveClerkPS_outData OutData)
         {
             try
             {
@@ -119,10 +109,10 @@ namespace YungApi
                 using (var Conn = new SqliteConnection(ConnectStr))
                 {
                     Conn.Open();
-                    string sqlStr = "DELETE FROM CLERK WHERE CLERK_NO='" + inData.ClerkNo + "'";
+                    string sqlStr = "DELETE FROM CLERK WHERE CLERK_NO='" + ClerkNo + "'";
                     Conn.Execute(sqlStr);
                     OutData.Status = "0000";    //成功
-                    WriteOneLineLog("YungService", "[RemoveClerk] Success :" + inData.ClerkNo);
+                    WriteOneLineLog("YungService", "[RemoveClerk] Success :" + ClerkNo);
                     return true;
                 }
             }
@@ -134,7 +124,7 @@ namespace YungApi
                 return false;
             }
         }
-
+        //寫LOG
         public void WriteOneLineLog(string FileName, string Lk_String)
         {
             // 寫一行到檔案中
@@ -160,7 +150,7 @@ namespace YungApi
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox("無法寫入Log檔" + ex.Message);
+
             }
         }
 
